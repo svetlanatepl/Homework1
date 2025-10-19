@@ -1,0 +1,45 @@
+Баг-репорты
+
+1. Функция contains в файле string_utils.py при тестировании не обрататывает пустое значение
+
+    Шаги:
+        а. В файле test_string_utils.py вызываем функцию contains с параметрами (string, symbol)
+        б. Параметр string = "cucumber"
+        в. Параметр symbol = "" (пустая строка)
+        г. Программа выдаёт ошибку "TypeError"
+
+    Уровень: lowest (низкий)
+    Серьёзность: S3 значтельный (Major)
+
+2. Функция contains в файле string_utils.py при тестировании не обрататывает значение None
+
+    Шаги:
+        а. В файле test_string_utils.py вызываем функцию contains с параметрами (string, symbol)
+        б. Параметр string = "cucumber"
+        в. Параметр symbol = Noe
+        г. Программа выдаёт ошибку "TypeError"
+
+        Уровень: lowest (низкий)
+        Серьёзность: S3 значтельный (Major)
+
+3. Функция delete_symbol в файле string_utils.py при тестировании не обрататывает пустое значение
+
+    Шаги:
+        а. В файле test_string_utils.py вызываем функцию delete_symbol с параметрами (string, symbol)
+        б. Параметр string = "Hello world"
+        в. Параметр symbol = "" (пустая строка)
+        г. Программа выдаёт ошибку "TypeError"
+
+    Уровень: lowest (низкий)
+    Серьёзность: S3 значтельный (Major)
+
+4. Функция delete_symbol в файле string_utils.py при тестировании не обрататывает значение None
+
+    Шаги:
+        а. В файле test_string_utils.py вызываем функцию delete_symbol с параметрами (string, symbol)
+        б. Параметр string = "My name is Svetlana"
+        в. Параметр symbol = None
+        г. Программа выдаёт ошибку "TypeError"
+
+    Уровень: lowest (низкий)
+    Серьёзность: S3 значтельный (Major)
