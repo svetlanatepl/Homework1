@@ -54,13 +54,18 @@ class MainPage:
         self.browser = browser
         self.wait = WebDriverWait(browser, 5)
 
-    def add_to_cart(self, locator):
+    def add_to_cart(self):
         # Добавляем товары в корзину
-        self.locator = locator
-        self.wait = WebDriverWait(self.browser, 20)
         self.wait.until(EC.element_to_be_clickable(
-            (By.CSS_SELECTOR, locator)
+            (By.CSS_SELECTOR, "#add-to-cart-sauce-labs-backpack")
         )).click()
+
+        self.browser.find_element(
+            By.CSS_SELECTOR, "#add-to-cart-sauce-labs-bolt-t-shirt"
+        ).click()
+
+        self.browser.find_element(
+            By.CSS_SELECTOR, "#add-to-cart-sauce-labs-onesie").click()
 
     def go_to_cart(self, browser):
         # Переходим в корзину

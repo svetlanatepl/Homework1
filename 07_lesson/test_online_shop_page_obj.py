@@ -56,14 +56,7 @@ def test_online_shop(browser):
     main_page = MainPage(browser)
 
     # Добавление товара в корзину
-    product_locators = [
-        '#add-to-cart-sauce-labs-backpack',
-        '#add-to-cart-sauce-labs-bolt-t-shirt',
-        '#add-to-cart-sauce-labs-onesie'
-    ]
-
-    for locator in product_locators:
-        main_page.add_to_cart(locator)
+    main_page.add_to_cart()
 
     # Переход в корзину
     main_page.go_to_cart(browser)
