@@ -34,16 +34,11 @@ def test_calc():
     driver.find_element(By.XPATH, "//span[text()='8']").click()
     driver.find_element(By.XPATH, "//span[text()='=']").click()
 
-    try:
-        wait.until(
-            EC.text_to_be_present_in_element(
-                (By.CSS_SELECTOR, ".screen"), "15"))
-        result = driver.find_element(By.CSS_SELECTOR, ".screen").text
-        assert result == "15"
-        print(f"Результат {result}")
-
-    except TimeoutException:
-        print("Элемент не найден в течение указанного времени ожидания")
+    wait.until(
+        EC.text_to_be_present_in_element(
+            (By.CSS_SELECTOR, ".screen"), "15"))
+    result = driver.find_element(By.CSS_SELECTOR, ".screen").text
+    assert result == "15"
 
     # Закрываем браузер
     driver.quit()
