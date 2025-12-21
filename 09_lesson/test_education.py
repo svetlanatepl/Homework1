@@ -27,7 +27,6 @@ def test_add_subject():
     # Проверка
     assert len(db_after) - len(db_before) == 1
 
-
 def test_edit_subject():
     # Изменение информации о предмете
 
